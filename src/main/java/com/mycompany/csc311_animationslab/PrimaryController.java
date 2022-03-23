@@ -2,6 +2,7 @@ package com.mycompany.csc311_animationslab;
 
 import java.io.IOException;
 import javafx.animation.FillTransition;
+import javafx.animation.ScaleTransition;
 import javafx.fxml.FXML;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
@@ -21,12 +22,21 @@ public class PrimaryController {
     private void yellowTransition() {
 
         FillTransition changeToYellow
-                = new FillTransition(Duration.seconds(2), blueRect);
+                = new FillTransition(Duration.seconds(3), blueRect);
         changeToYellow.setToValue(Color.YELLOW);        
         changeToYellow.setCycleCount(2);
         changeToYellow.setAutoReverse(true);
         changeToYellow.play();
 
+    }
+    
+    @FXML
+    private void stretchRect(){
+        
+        ScaleTransition stretch 
+                = new ScaleTransition(Duration.seconds(1) , blueRect);
+        stretch.setByX(2);
+        stretch.play();
     }
 
 }
