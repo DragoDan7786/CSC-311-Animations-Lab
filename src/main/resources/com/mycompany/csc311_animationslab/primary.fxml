@@ -20,6 +20,7 @@
             <Button mnemonicParsing="false" onAction="#yellowTransition" prefHeight="25.0" prefWidth="116.0" text="Yellow Transition" />
             <Button mnemonicParsing="false" onAction="#stretchRect" prefHeight="25.0" prefWidth="116.0" text="Double Width" />
             <Button mnemonicParsing="false" onAction="#yellowAndDouble" text="Yellow and Double" />
+            <Button mnemonicParsing="false" onAction="#moveXY" prefHeight="25.0" prefWidth="115.0" text="Timeline XY" />
          </children>
       </VBox>
    </left>

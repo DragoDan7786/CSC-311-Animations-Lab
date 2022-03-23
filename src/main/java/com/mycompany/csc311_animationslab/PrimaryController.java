@@ -2,8 +2,12 @@ package com.mycompany.csc311_animationslab;
 
 import java.io.IOException;
 import javafx.animation.FillTransition;
+import javafx.animation.KeyFrame;
+import javafx.animation.KeyValue;
 import javafx.animation.ParallelTransition;
 import javafx.animation.ScaleTransition;
+import javafx.animation.SequentialTransition;
+import javafx.animation.Timeline;
 import javafx.fxml.FXML;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
@@ -56,4 +60,18 @@ public class PrimaryController {
         parallelTransition.play();
     }
 
+    @FXML
+    private void moveXY() {
+        KeyValue moveY = new KeyValue(blueRect.translateYProperty(), 400);
+        KeyFrame yFrame = new KeyFrame(Duration.seconds(3), moveY);
+        Timeline yTransititon = new Timeline(yFrame);
+        
+        KeyValue moveX = new KeyValue(blueRect.translateXProperty(), -50);
+        KeyFrame xFrame = new KeyFrame(Duration.seconds(2), moveX);
+        Timeline xTransition = new Timeline(xFrame);
+        
+        SequentialTransition sequentialTransition
+                = new SequentialTransition(yTransititon, xTransition);
+        sequentialTransition.play();
+    }
 }
