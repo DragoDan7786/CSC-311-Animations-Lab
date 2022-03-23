@@ -23,7 +23,8 @@ public class PrimaryController {
         FillTransition changeToYellow
                 = new FillTransition(Duration.seconds(2), blueRect);
         changeToYellow.setToValue(Color.YELLOW);        
-        changeToYellow.setCycleCount(1);
+        changeToYellow.setCycleCount(2);
+        changeToYellow.setAutoReverse(true);
         changeToYellow.play();
 
     }
