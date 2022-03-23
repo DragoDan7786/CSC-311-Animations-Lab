@@ -15,10 +15,11 @@
       </Pane>
    </center>
    <left>
-      <VBox prefHeight="400.0" prefWidth="111.0" BorderPane.alignment="CENTER">
+      <VBox prefHeight="400.0" prefWidth="123.0" BorderPane.alignment="CENTER">
          <children>
-            <Button mnemonicParsing="false" onAction="#yellowTransition" text="Yellow Transition" />
-            <Button mnemonicParsing="false" onAction="#stretchRect" prefHeight="25.0" prefWidth="106.0" text="Double Width" />
+            <Button mnemonicParsing="false" onAction="#yellowTransition" prefHeight="25.0" prefWidth="116.0" text="Yellow Transition" />
+            <Button mnemonicParsing="false" onAction="#stretchRect" prefHeight="25.0" prefWidth="116.0" text="Double Width" />
+            <Button mnemonicParsing="false" onAction="#yellowAndDouble" text="Yellow and Double" />
          </children>
       </VBox>
    </left>
